@@ -27,7 +27,7 @@
         {% if user.is_authenticated == True %}
           <li class="nav-item dropdown">
             <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">{{user.first_name}}</a>
+              aria-haspopup="true" aria-expanded="false">{{user.first_name}}&#9826;</a>
             <div class="dropdown-menu shadow" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
               <a class="dropdown-item" href="{% url 'showbookings' %}">Bookings</a>
@@ -37,14 +37,14 @@
           </li>
         {% endif %}
 
-        <li class="nav-item d-lg-none">
-          <span style="font-size:23px;cursor:pointer;" onclick="openNav()" class="sidebtn">&#9776;</span>
+        <li class="nav-item">
+          <span style="font-size:26px;cursor:pointer;" onclick="openNav()" class="sidebtn rounded px-2">&#926;</span>
         </li>
       </ul>
     </div>
 
-    <div id="mySidenav" class="sidenav">
-      <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
+    <div id="mySidenav" class="sidenav text-center">
+      <span href="javascript:void(0)" style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</span>
       <a href="{% url 'aboutus' %}">About-us</a>
       <a href="{% url 'contact' %}">Contact</a>
       <a href="{% url 'updates' %}">Updates</a>

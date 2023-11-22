@@ -2,10 +2,12 @@ from email.message import EmailMessage
 import ssl
 import smtplib
 
+e_pass="rmlercdaahzndkpi"
+e_send="sunkon.com@gmail.com"
+
 #________________________Booking mail____________________________
 def booking_mail(reciver_mail,bill,pack_start,pack_end,members,package,price):
-    e_send="sunkon.com@gmail.com"
-    e_pass="exzrspbqiqddyrom"
+    
     e_reci=reciver_mail
 
     sub="Tour Booking"
@@ -37,8 +39,6 @@ def booking_mail(reciver_mail,bill,pack_start,pack_end,members,package,price):
 
 #________________________cancel tour mail____________________________
 def Cancel_mail(reciver_mail,bill,pack_start,pack_end,members,package,price):
-    e_send="sunkon.com@gmail.com"
-    e_pass="exzrspbqiqddyrom"
     e_reci=reciver_mail
 
     sub="Tour Cancel Booking"
